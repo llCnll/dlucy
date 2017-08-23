@@ -994,15 +994,13 @@
         }
         $('#sample_1').dataTable().fnAddData(theData);
 
-        $("#info-boxtype option").each(function (){
-            if($(this).text()=="请选择..."){
-                $(this).attr("selected",true);
-            }});
-        $("#info-pickaddr option").each(function (){
-            if($(this).text()=="请选择..."){
-                $(this).attr("selected",true);
-            }});
+        $("form select").each(function (index,item){
+            $(item).find('option').each(function () {
+                $(this).removeAttrs('selected');
+            });
+        });
 
+        $('.chzn-container-single span').html('请选择...');
 
         alert("添加成功");
         resetAll();
@@ -1129,6 +1127,7 @@
             reloadData(theData);
             check = true;
         }
+
 
         return false;
 
