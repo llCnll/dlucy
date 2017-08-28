@@ -1,0 +1,27 @@
+@import url("../css/bootstrap.min.css");
+
+@import url("../css/bootstrap-responsive.min.css");
+
+@import url("../css/font-awesome.min.css");
+
+@import url("../css/style-metro.css");
+
+@import url("../css/style.css");
+
+@import url("../css/default.css");
+
+@import url("../css/style-responsive.css");
+
+@import url("../css/uniform.default.css");
+
+.header {
+    margin: 0 auto !important;
+}
+
+.page-container {
+    margin: 0 auto !important;
+}
+
+.page-content {
+    min-height: 900px !important;
+}

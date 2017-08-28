@@ -78,6 +78,9 @@ var TableAdvanced = function () {
             ],
             // set the initial value
             "iDisplayLength": 10,
+            "sScrollX": "100%",
+            "sScrollY": "300",
+            "bScrollCollapse": true,
         });
 
         jQuery('#sample_1_wrapper .dataTables_filter input').addClass("m-wrap small"); // modify table search input
@@ -156,8 +159,33 @@ var TableAdvanced = function () {
                 });
 
                 $("#info-pickdate" ).datepicker( 'setDate' , new Date(aData[2]));
-                $("#info-recdate" ).datepicker( 'setDate' , new Date(aData[6]));
 
+                $("#info-pickaddr option").each(function (){
+                    if($(this).text()==aData[1]){
+                        $(this).attr("selected",true);
+                    }});
+                $("#info-pickperson option").each(function (){
+                    if($(this).text()==aData[3]){
+                        $(this).attr("selected",true);
+                    }});
+                $("#info-picktel option").each(function (){
+                    if($(this).text()==aData[4]){
+                        $(this).attr("selected",true);
+                    }});
+
+                $("#info-recdate" ).datepicker( 'setDate' , new Date(aData[6]));
+                $("#info-recaddr option").each(function (){
+                    if($(this).text()==aData[5]){
+                        $(this).attr("selected",true);
+                    }});
+                $("#info-recperson option").each(function (){
+                    if($(this).text()==aData[7]){
+                        $(this).attr("selected",true);
+                    }});
+                $("#info-rectel option").each(function (){
+                    if($(this).text()==aData[8]){
+                        $(this).attr("selected",true);
+                    }});
                 oTable.fnDeleteRow(nTr);
             }
         })
