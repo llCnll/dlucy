@@ -8,15 +8,13 @@ var TableAdvanced = function () {
             var aData = oTable.fnGetData(nTr);
             var sOut = '<table>';
             sOut += '<tr><td colspan="2">==========================提货信息==========================</td></tr>';
-            sOut += '<tr><td>地址:</td><td>' + aData[1] + '</td></tr>';
-            sOut += '<tr><td>日期:</td><td>' + aData[2] + '</td></tr>';
-            sOut += '<tr><td>担当:</td><td>' + aData[3] + '</td></tr>';
-            sOut += '<tr><td>电话:</td><td>' + aData[4] + '</td></tr>';
+            sOut += '<tr><td>提货联系人:</td><td>' + aData[17] + '</td></tr>';
+            sOut += '<tr><td>提货地址:</td><td>' + aData[18] + '</td></tr>';
+            sOut += '<tr><td>提货联系人电话:</td><td>' + aData[19] + '</td></tr>';
             sOut += '<tr><td colspan="2">==========================收货信息==========================</td></tr>';
-            sOut += '<tr><td>地址:</td><td>' + aData[5] + '</td></tr>';
-            sOut += '<tr><td>日期:</td><td>' + aData[6] + '</td></tr>';
-            sOut += '<tr><td>担当:</td><td>' + aData[7] + '</td></tr>';
-            sOut += '<tr><td>电话:</td><td>' + aData[8] + '</td></tr>';
+            sOut += '<tr><td>收货联系人:</td><td>' + aData[20] + '</td></tr>';
+            sOut += '<tr><td>收货地址:</td><td>' + aData[21] + '</td></tr>';
+            sOut += '<tr><td>收货联系人电话:</td><td>' + aData[22] + '</td></tr>';
             sOut += '</table>';
 
             return sOut;
@@ -45,12 +43,8 @@ var TableAdvanced = function () {
                 null,
                 {"bVisible": false},
                 {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
-                {"bVisible": false},
+                null,
+                null,
                 null,
                 null,
                 null,
@@ -65,13 +59,16 @@ var TableAdvanced = function () {
                 null,
                 {"bVisible": false},
                 {"bVisible": false},
-                null,
-                null
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false},
+                {"bVisible": false},
+
             ],
             "aoColumnDefs": [
                 {"bSortable": false, "aTargets": [0]}
             ],
-            "aaSorting": [[22, 'desc']],
+            "aaSorting": [[2, 'desc']],
             "aLengthMenu": [
                 [10, 50, 100, -1],
                 [10, 50, 100, "全部"] // change per page values here
