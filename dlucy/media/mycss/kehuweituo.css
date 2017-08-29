@@ -8,7 +8,10 @@
 
 @import url("../css/bootstrap-modal.css");
 
-.dataTables_scrollBody{
+.dataTables_scroll{
     overflow: scroll !important;
+}
+.dataTables_scrollBody{
+    overflow: visible !important;
 }
 
